@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://bm7u50hufopw0"]
+
+[ext_resource type="PackedScene" uid="uid://dago64fwymxfn" path="res://Shuri/Shuri.tscn" id="1_iyjj4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d3rv8"]
+size = Vector2(26, 660)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5mmti"]
+size = Vector2(1184, 17)
+
+[node name="main" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_iyjj4")]
+position = Vector2(160, 274)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1156, 326)
+shape = SubResource("RectangleShape2D_d3rv8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-3, 320)
+shape = SubResource("RectangleShape2D_d3rv8")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(579, 3.5)
+shape = SubResource("RectangleShape2D_5mmti")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(577, 648)
+shape = SubResource("RectangleShape2D_5mmti")

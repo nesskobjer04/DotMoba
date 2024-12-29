@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://dago64fwymxfn"]
+
+[ext_resource type="Script" path="res://GDScripts/shuri.gd" id="1_chgbu"]
+[ext_resource type="Texture2D" uid="uid://bsbtpqgoofcgw" path="res://Resources/pixil-frame-0.png" id="2_6ul51"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6roqy"]
+radius = 33.0
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_chgbu")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("2_6ul51")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_6roqy")
+
+[node name="ThrowPoint" type="Marker2D" parent="."]
+position = Vector2(50, 1)
